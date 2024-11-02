@@ -16,14 +16,19 @@ const instance = axios.create({
 
   const displayWonders = (wonders) => {
     const container = document.getElementById('card-container');
-    container.innerHTML = ''; // Clear the container if needed
+    container.innerHTML = ''; 
 
     wonders.forEach(wonder => {
-    const arrlinks = wonder.links?.length || "N/A";
-    const britannica = wonder.links?.britannica || "N/A";
     const images = wonder.links?.images || [];
     const card = document.createElement('div');
     card.classList.add('card');
+
+    const viewButton = document.createElement('button');
+    viewButton.textContent = "View Details";
+    viewButton.addEventListener('click', () => {
+      localStorage.setItem('selectedWonder', JSON.stringify(wonder));
+      window.location.href = './page.html';
+    });
 
       const firstImage = images.length > 0 ? 
       `<img src="${images[0]}" alt="Image of ${wonder.name}">`:
@@ -33,15 +38,11 @@ const instance = axios.create({
        <p><strong></strong></p>
       ${firstImage}
         <h3>${wonder.name}</h3>
-        <p><strong>Location:</strong> ${wonder.location}</p>
-
-        <button>Wonder Details</button>
-      
-  
       
       `;
 
       container.appendChild(card);
+      card.appendChild(viewButton);
     });
   };
 
