@@ -34,6 +34,8 @@ const instance = axios.create({
       ${firstImage}
         <h3>${wonder.name}</h3>
         <p><strong>Location:</strong> ${wonder.location}</p>
+
+        <button>Wonder Details</button>
       
   
       
