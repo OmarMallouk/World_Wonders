@@ -30,11 +30,11 @@ const instance = axios.create({
       '<p>No images available.</p>';
 
       card.innerHTML = `
-       <p><strong>Images:</strong></p>
+       <p><strong></strong></p>
       ${firstImage}
         <h3>${wonder.name}</h3>
         <p><strong>Location:</strong> ${wonder.location}</p>
-        <p><strong>Description:</strong> ${wonder.summary}</p>
+      
   
       
       `;
