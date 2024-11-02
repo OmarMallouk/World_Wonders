@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>${wonderData.summary}</p>
       
     `;
-    imageContainer.appendChild(imageDetail);
+
     container.appendChild(cardDetail);
   } else {
     container.innerHTML = "<p>No wonder data found.</p>";
