@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('card-container');
+    const container = document.getElementById('card-container2');
 
     const wonderData = JSON.parse(localStorage.getItem('selectedWonder'));
 

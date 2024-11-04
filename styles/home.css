@@ -62,7 +62,7 @@ body{
   .card {
     display: flex;
     flex-direction: column;
-    background-color: rgb(27, 75, 121);
+    background-color: rgba(109, 75, 23, 0.486);
     width: 250px;
     border: 1px solid #ddd;
     padding: 16px;
